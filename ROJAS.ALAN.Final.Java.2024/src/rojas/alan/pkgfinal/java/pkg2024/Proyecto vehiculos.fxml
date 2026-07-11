@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ventana" fx:id="ventana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rojas.alan.pkgfinal.java.pkg2024.ControladorProyecto">
+   <children>
+      <MenuBar id="menubarra" fx:id="menubarra" layoutY="2.0" prefHeight="25.0" prefWidth="729.0">
+        <menus>
+          <Menu id="btnarchivo" fx:id="btnarchivo" mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem id="btnguardar" fx:id="btnguardar" onAction="#guardarDatos" mnemonicParsing="false" text="Guardar" />
+                  <MenuItem id="btnexportar" fx:id="btnexportar"    onAction="#exportar" mnemonicParsing="false" text="Exportar TXT" />
+                  <MenuItem id="btncargar" fx:id="btncargarCSV" onAction="#cargarCSV" mnemonicParsing="false" text="Cargar CSV" />
+                  <MenuItem id="btncargar" fx:id="btncargarJSON" onAction="#cargarJSON" mnemonicParsing="false" text="Cargar JSON" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView id="tabla" fx:id="tabla" layoutX="19.0" layoutY="35.0" prefHeight="378.0" prefWidth="691.0">
+        <columns>
+          <TableColumn id="columnavehiculos" fx:id="columnavehiculos" prefWidth="59.0" text="Vehiculo" />
+          <TableColumn id="columnamarca" fx:id="columnamarca" prefWidth="170.0" text="Marca" />
+            <TableColumn id="columnaanio" fx:id="columnaanio" prefWidth="64.0" text="Año" />
+            <TableColumn id="columnaprecio" fx:id="columnaprecio" prefWidth="104.0" text="Precio" />
+            <TableColumn id="columnacolor" fx:id="columnacolor" minWidth="0.0" prefWidth="103.0" text="Color" />
+            <TableColumn id="columnaestado" fx:id="columnaestado" prefWidth="111.0" text="Estado" />
+            <TableColumn id="columnaelectrico" fx:id="columnaelectrico" prefWidth="79.0" text="Es electrico?" />
+        </columns>
+      </TableView>
+      <Button id="btnaniadir" fx:id="btnaniadir" layoutX="31.0" layoutY="425.0" mnemonicParsing="false" onAction="#agregarVehiculo" prefHeight="80.0" prefWidth="145.0" text="Añadir">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@auto-agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="btneliminar" fx:id="btneliminar" onAction="#eliminarVehiculo"  layoutX="205.0" layoutY="425.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="145.0" text="Eliminar">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@auto-eliminar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button id="btoneditar" fx:id="btoneditar" onAction="#actualizarVehiculo"  layoutX="377.0" layoutY="425.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="145.0" text="Editar">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@auto-editar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button id="btnfiltrar" fx:id="btnfiltrar" onAction="#filtrarVehiculos"   layoutX="553.0" layoutY="426.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="145.0" text="Filtrar">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@auto-filtrar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+===== LISTADO DE VEHICULOS =====
+Cantidad de vehiculos: 2
+================================
+
+Tipo: Moto
+Marca: ferreo
+Año: 2000
+Precio: $5000
+Color: Azul
+Estado: Nuevo
+Electrico: true
+Sidecar: true
+Cilindrado: 200
+----------------------------------------
+Tipo: Auto
+Marca: Ford
+Año: 2010
+Precio: $8000
+Color: Otro
+Estado: Usado
+Electrico: false
+Automatico: true
+Caballos de fuerza: 120
+----------------------------------------

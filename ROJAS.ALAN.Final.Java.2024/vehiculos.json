@@ -1,0 +1,24 @@
+[
+  {
+    "tipo": "Moto",
+    "marca": "ferreo",
+    "anio": 2000,
+    "precio": 5000,
+    "color": "Azul",
+    "estado": "Nuevo",
+    "electrico": true,
+    "sidecar": false,
+    "cilindrado": 200
+  },
+  {
+    "tipo": "Auto",
+    "marca": "Ford",
+    "anio": 2010,
+    "precio": 8000,
+    "color": "Otro",
+    "estado": "Usado",
+    "electrico": false,
+    "automatico": true,
+    "caballosDeFuerza": 120
+  }
+]

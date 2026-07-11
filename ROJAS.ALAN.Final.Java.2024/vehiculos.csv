@@ -1,0 +1,3 @@
+Tipo,Marca,Anio,Precio,Color,Estado,Electrico,Atributo1,Atributo2
+Moto,ferreo,2000,5000,Azul,Nuevo,true,false,200
+Auto,Ford,2010,8000,Otro,Usado,false,true,120
