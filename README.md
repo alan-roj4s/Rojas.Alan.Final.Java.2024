@@ -2,32 +2,92 @@
 ====================================
 
 
-# Sistema CRUD de Vehiculos.
+# Sistema CRUD de Gestion de Vehiculos.
 
 ### Sobre Mi: 
-El nombre es **Alan Rojas**, estudiante de la UTN y este es el proyecto final de Java en Netbeans.
+El nombre es **Alan Rojas**, estudiante de la UTN y este proyecto de Netbeans es del trabajo final para la materia de Programacion II.
 
 ## Resumen
-El proyecto a continuacion es un CRUD de vehiculos que utiliza JavaFX para crear una interfaz grafica.
+El proyecto consiste de una aplicacion CRUD que simula una gestion de vehiculos. permite administrar los vehiculos de la lista por medio de la interfaz grafica.
 
+### Funcionalidades
 el programa es capaz de:
-1. agregar y eliminar vehiculos
-2. listar los vehiculos existentes
-3. filtrar una lista por el tipo de vehiculo deseado
-4. aumentar los precios de los vehiculos un 10%
-5. convertir los autos a electricos
-6. ordenar los vehiculos existentes por año, precio (menor a mayor) y por marca
-7. guardar los cambios hechos en formato CSV y TXT
+1. Agregar, eliminar y editar vehiculos por medio de interfaces visuales (.fxml).
+2. Listar los vehiculos existentes en una tabla organizada.
+3. Filtrar por tipo de vehiculo (Auto, Moto o Camion).
+4. Ordenar los vehiculos por precio, estado y mas.
+5. Ordernar por Ascendencia y Descendencia.
+6. Exportar la informacion a un archivo TXT legible
+7. Guarda los datos mediante serializacion (.dat), formatos CSV (.csv) y JSON (.json)
+8. Carga los datos guardados por medio de el formato CSV o JSON.
+9. Mostrar informacion adicional de cada vehiculo en la tabla por medio de Tooltips al tener el mouse encima.
 
-a continuacion una imagen de la aplicacion
 
-<img width="598" height="527" alt="Image" src="https://github.com/user-attachments/assets/683378b9-8f0e-4392-afb0-31b66cb33aa2" />
+# Capturas de la aplicacion
 
-## Diagrama del proyecto
+## Pantalla principal
+
+(Pegar aquí una captura)
+
+![Pantalla principal](imagenes/principal.png)
+
+## Formulario de alta
+
+(Pegar aquí otra captura)
+
+![Formulario](imagenes/formulario.png)
+
+## Filtrado
+
+(Pegar aquí otra captura)
+
+![Filtro](imagenes/filtro.png)
+
+## Diagrama UML del proyecto
 
 <img width="740" height="590" alt="Image" src="https://github.com/user-attachments/assets/6a2b7553-1770-4848-87d4-f856577d5e0b" />
 
 
 
 
-los archivos CSV y TXT se pueden encontrar en el proyecto
+# Archivos generados
+
+La aplicación genera los siguientes archivos:
+
+- **vehiculos.dat** (serialización)
+- **vehiculos.csv**
+- **vehiculos.json**
+- **vehiculos.txt**
+
+Ejemplos:
+
+### CSV
+
+```
+Tipo,Marca,Año,Precio...
+```
+
+### JSON
+
+```json
+[
+  {
+    "tipo":"Auto",
+    "marca":"Ford"
+  }
+]
+```
+
+### TXT
+
+```
+===== LISTADO DE VEHICULOS =====
+
+Tipo: Auto
+Marca: Ford
+Precio: $15000
+
+...
+```
+
+Los archivos completos pueden encontrarse dentro del proyecto.
