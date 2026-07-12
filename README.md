@@ -25,22 +25,25 @@ el programa es capaz de:
 
 # Capturas de la aplicacion
 
-## Pantalla principal
+## Menu principal
 
 <img width="727" height="545" alt="image" src="https://github.com/user-attachments/assets/80b759ba-72b8-446c-bf57-fb8d166ffacc" />
 
 
-## Formulario de alta
+## Formulario (utilizado para agregar y actualizar)
 
-(Pegar aquí otra captura)
+<img width="493" height="427" alt="image" src="https://github.com/user-attachments/assets/f1334149-17cf-43bf-a63f-d2e8d1be1433" />
 
-![Formulario](imagenes/formulario.png)
+
+## Seleccion (utilizado para actualizar y eliminar)
+
+<img width="359" height="202" alt="image" src="https://github.com/user-attachments/assets/d53df7a0-5ffc-4789-a675-da5dc5862b90" />
+
 
 ## Filtrado
 
-(Pegar aquí otra captura)
+<img width="267" height="405" alt="image" src="https://github.com/user-attachments/assets/43d2e81b-723e-425e-a39b-d8aa4be91da9" />
 
-![Filtro](imagenes/filtro.png)
 
 ## Diagrama UML del proyecto
 
