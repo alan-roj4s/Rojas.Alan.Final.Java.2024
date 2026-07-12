@@ -27,9 +27,8 @@ el programa es capaz de:
 
 ## Pantalla principal
 
-(Pegar aquí una captura)
+<img width="727" height="545" alt="image" src="https://github.com/user-attachments/assets/80b759ba-72b8-446c-bf57-fb8d166ffacc" />
 
-![Pantalla principal](imagenes/principal.png)
 
 ## Formulario de alta
 
