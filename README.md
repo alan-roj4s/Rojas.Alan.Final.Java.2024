@@ -66,7 +66,8 @@ Ejemplos:
 ### CSV
 
 ```
-Tipo,Marca,Año,Precio...
+Tipo,Marca,Anio,Precio,Color,Estado,Electrico,Atributo1,Atributo2
+Auto,Ford,2010,8000,Otro,Usado,false,true,120
 ```
 
 ### JSON
@@ -74,9 +75,16 @@ Tipo,Marca,Año,Precio...
 ```json
 [
   {
-    "tipo":"Auto",
-    "marca":"Ford"
-  }
+    "tipo": "Auto",
+    "marca": "Ford",
+    "anio": 2010,
+    "precio": 8000,
+    "color": "Otro",
+    "estado": "Usado",
+    "electrico": false,
+    "automatico": true,
+    "caballosDeFuerza": 120
+  },
 ]
 ```
 
@@ -84,12 +92,19 @@ Tipo,Marca,Año,Precio...
 
 ```
 ===== LISTADO DE VEHICULOS =====
+Cantidad de vehiculos: 1
+================================
 
 Tipo: Auto
 Marca: Ford
-Precio: $15000
-
-...
+Año: 2010
+Precio: $8000
+Color: Otro
+Estado: Usado
+Electrico: false
+Automatico: true
+Caballos de fuerza: 120
+----------------------------------------
 ```
 
 Los archivos completos pueden encontrarse dentro del proyecto.
