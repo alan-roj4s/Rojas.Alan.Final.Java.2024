@@ -14,7 +14,7 @@ public class Vehi_Camion extends Vehiculo{
     private int cargaCapacidad;
     
     
-    public Vehi_Camion (String marca, int anio, int precio, EnumColor color, EnumEstado estado, boolean electrico, int cargaCapacidad, int ejes) {
+    public Vehi_Camion (String marca, int anio, int precio, EnumColor color, EnumEstado estado, boolean electrico, int ejes, int cargaCapacidad) {
         super(marca, anio, precio, color, estado, electrico); //super llama metodos de superclase (padre)
         this.ejes = ejes;
         this.cargaCapacidad = cargaCapacidad;

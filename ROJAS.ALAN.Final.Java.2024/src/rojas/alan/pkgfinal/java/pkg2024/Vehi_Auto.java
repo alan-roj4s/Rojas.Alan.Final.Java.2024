@@ -45,7 +45,7 @@ public class Vehi_Auto extends Vehiculo{
     public String descripcion() {
         String tipo ;
         if (automatico == true) {
-            tipo = "automatica";
+            tipo = "automatico";
         } else {
             tipo = "manual";
         }

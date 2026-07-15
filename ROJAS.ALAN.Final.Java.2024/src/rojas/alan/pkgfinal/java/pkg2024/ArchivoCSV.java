@@ -16,9 +16,9 @@ public class ArchivoCSV {
     // === guardado CSV ===
     public static void guardarCSV(List<Vehiculo> lista, String nombreArchivo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo))) {
-            // Encabezado
+            // --- encabezadooo
             bw.write("Tipo,Marca,Anio,Precio,Color,Estado,Electrico,Atributo1,Atributo2");
-            bw.newLine();
+            bw.newLine(); // esto va para abajo, creando una linea nueva
             for (Vehiculo v : lista) {
                 bw.write(
                         v.obtenerTipo() + "," +
@@ -30,7 +30,7 @@ public class ArchivoCSV {
                         v.isElectrico()
                 );
                 
-                // Datos propios de Auto
+                // auto
                 if (v instanceof Vehi_Auto) {
                     Vehi_Auto a = (Vehi_Auto) v;
                     bw.write("," +
@@ -38,7 +38,7 @@ public class ArchivoCSV {
                             a.getCaballosDeFuerza());
                 }
 
-                // Datos propios de Moto
+                // moto
                 else if (v instanceof Vehi_Moto) {
                     Vehi_Moto m = (Vehi_Moto) v;
                     bw.write("," +
@@ -46,7 +46,7 @@ public class ArchivoCSV {
                             m.getCilindrado());
                 }
 
-                // Datos propios de Camion
+                // camion
                 else if (v instanceof Vehi_Camion) {
                     Vehi_Camion c = (Vehi_Camion) v;
                     bw.write("," +
@@ -66,7 +66,7 @@ public class ArchivoCSV {
     public static ArrayList<Vehiculo> cargarCSV(String nombreArchivo) {
         ArrayList<Vehiculo> lista = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
-            br.readLine(); // salta encabezado
+            br.readLine(); // <-- cosa que se salta el encabezado, evitando romper el codigo
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",");

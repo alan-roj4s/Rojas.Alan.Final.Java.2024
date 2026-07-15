@@ -17,10 +17,11 @@
         <menus>
           <Menu id="btnarchivo" fx:id="btnarchivo" mnemonicParsing="false" text="Archivo">
             <items>
-                  <MenuItem id="btnguardar" fx:id="btnguardar" onAction="#guardarDatos" mnemonicParsing="false" text="Guardar" />
-                  <MenuItem id="btnexportar" fx:id="btnexportar"    onAction="#exportar" mnemonicParsing="false" text="Exportar TXT" />
-                  <MenuItem id="btncargar" fx:id="btncargarCSV" onAction="#cargarCSV" mnemonicParsing="false" text="Cargar CSV" />
-                  <MenuItem id="btncargar" fx:id="btncargarJSON" onAction="#cargarJSON" mnemonicParsing="false" text="Cargar JSON" />
+                  <MenuItem id="btnguardar" fx:id="btnguardar" mnemonicParsing="false" onAction="#guardarDatos" text="Guardar" />
+                  <MenuItem id="btnexportar" fx:id="btnexportar" mnemonicParsing="false" onAction="#exportar" text="Exportar TXT" />
+                  <MenuItem id="btncargar" fx:id="btncargarCSV" mnemonicParsing="false" onAction="#cargarCSV" text="Cargar CSV" />
+                  <MenuItem id="btncargar" fx:id="btncargarJSON" mnemonicParsing="false" onAction="#cargarJSON" text="Cargar JSON" />
+                  <MenuItem fx:id="btncargarDAT" mnemonicParsing="false" onAction="#cargarDAT" text="Cargar DAT" />
             </items>
           </Menu>
         </menus>
@@ -47,7 +48,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button id="btneliminar" fx:id="btneliminar" onAction="#eliminarVehiculo"  layoutX="205.0" layoutY="425.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="145.0" text="Eliminar">
+      <Button id="btneliminar" fx:id="btneliminar" layoutX="205.0" layoutY="425.0" mnemonicParsing="false" onAction="#eliminarVehiculo" prefHeight="78.0" prefWidth="145.0" text="Eliminar">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -58,7 +59,7 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button id="btoneditar" fx:id="btoneditar" onAction="#actualizarVehiculo"  layoutX="377.0" layoutY="425.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="145.0" text="Editar">
+      <Button id="btoneditar" fx:id="btoneditar" layoutX="377.0" layoutY="425.0" mnemonicParsing="false" onAction="#actualizarVehiculo" prefHeight="78.0" prefWidth="145.0" text="Editar">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -69,7 +70,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button id="btnfiltrar" fx:id="btnfiltrar" onAction="#filtrarVehiculos"   layoutX="553.0" layoutY="426.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="145.0" text="Filtrar">
+      <Button id="btnfiltrar" fx:id="btnfiltrar" layoutX="553.0" layoutY="426.0" mnemonicParsing="false" onAction="#filtrarVehiculos" prefHeight="80.0" prefWidth="145.0" text="Filtrar">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>

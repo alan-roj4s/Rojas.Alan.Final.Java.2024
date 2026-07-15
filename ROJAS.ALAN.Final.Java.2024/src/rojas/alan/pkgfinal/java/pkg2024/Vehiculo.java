@@ -10,8 +10,10 @@ import java.io.Serializable;
  */
 public abstract class Vehiculo implements Serializable, Comparable<Vehiculo> { // abstract, solo heredaciones la consiguen
     
+    
+    
     protected String marca;
-    protected int anio; // protected, los hijos tienen accesso
+    protected int anio; // protected, los hijos tienen acceso
     protected int precio;
     protected EnumColor color; // llamando los enums
     protected EnumEstado estado;
@@ -29,7 +31,7 @@ public abstract class Vehiculo implements Serializable, Comparable<Vehiculo> { /
     public Vehiculo () {}
     
     //1. todo atributo
-    public Vehiculo (String marca, int anio, int precio, EnumColor color, EnumEstado estado, boolean electrico) {
+    public Vehiculo (String marca, int anio, int precio, EnumColor color, EnumEstado estado, boolean electrico) { // unico que se usa
         this.marca = marca;
         this.anio = anio;
         this.precio = precio;
@@ -94,9 +96,11 @@ public abstract class Vehiculo implements Serializable, Comparable<Vehiculo> { /
         this.electrico = electrico;
     }
     
+    
+    
     // === comparable / MISC ===
 
-    @Override // ordena por nombre de forma natural
+    @Override // ordena por nombre de forma natural, relacionado a comparable
     public int compareTo(Vehiculo otro) {
         return this.marca.compareTo(otro.marca); 
     };

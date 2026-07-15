@@ -1,6 +1,6 @@
 package rojas.alan.pkgfinal.java.pkg2024;
 
-import java.util.List;
+
 import java.util.*;
 import java.io.*;
 import java.util.function.*;
@@ -9,34 +9,38 @@ import java.util.function.*;
 public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculos puede declararse como vehiculos, object o como quieras
     
     // === atributo lista ===
-    private ArrayList<Vehiculo> listaVehiculos; // esto es una variable array sin datos aun
-    // === constructor ===
+    private ArrayList<Vehiculo> listaVehiculos; // esto es una variable  sin datos aun
+    
+    
+    // === mini constructor ===
     public GestionVehiculos() {
         listaVehiculos = new ArrayList<>(); // luego crea el array con la variable
     }
     
+    
     // === metodos interfaces ===
     @Override
     public void agregar(Vehiculo vehiculo) {
-        listaVehiculos.add(vehiculo); // 
+    //  listaVehiculos.add(vehiculo); 
+        agregarVehiculo(listaVehiculos, vehiculo);
         System.out.println("se ha interactuado");
     }
     
     @Override
     public void eliminar(Vehiculo vehiculo) {
         listaVehiculos.remove(vehiculo);
-        System.out.println("se ha interactuado");
+        System.out.println("se ha eliminado");
     }
     
     @Override
-    public void actualizar(Vehiculo viejo, Vehiculo nuevo) {
-        int indice = listaVehiculos.indexOf(viejo);
+    public void actualizar(Vehiculo viejo, Vehiculo nuevo) { // este metodo ya no se usa desde que se implemento otra forma de actualizar
+        int indice = listaVehiculos.indexOf(viejo); // busca el indice del vehiculo indicado
 
-        if (indice != -1) {
+        if (indice != -1) { // -1 es un valor unico si no encuentra el index
             listaVehiculos.set(indice, nuevo);
-            System.out.println("Vehiculo actualizado.");
+            System.out.println("actualizado");
         } else {
-            System.out.println("No se encontro el vehiculo.");
+            System.out.println("no se encontro el vehiculo");
         }
     }
     
@@ -49,40 +53,37 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
     
     // === metodos no-interface
     
-    public Vehiculo buscar(String marca) {  // metodo que se usara principalmente para actualizar y eliminar, podria estar en la interface tambien
-        for (Vehiculo v : listaVehiculos) {
-            if (v.getMarca().equalsIgnoreCase(marca)) {
-                return v;
-            }
-        }
-        return null;
-    }
+//    public Vehiculo buscar(String marca) {  // metodo que se usara principalmente para actualizar y eliminar, podria estar en la interface tambien
+//        for (Vehiculo v : listaVehiculos) {
+//            if (v.getMarca().equalsIgnoreCase(marca)) {
+//                return v;
+//            }
+//        }
+//        return null;
+//    } 
+    // el codigo es remanente debido a que la idea era que iba a escribir el nombre de marca, esa idea ya ha cambiado desde entonces
     
-    // --- comparadores
-    public void ordenarPorPrecio() {
-        Collections.sort(listaVehiculos, new CompararPrecio());
-    }
-
-    public void ordenarPorEstado() {
-        Collections.sort(listaVehiculos, new CompararEstado());
-    }
     
     
     
     // --- wildcards / filtrado
-    public List<Vehiculo> filtrarTipo(List<? extends Vehiculo> lista, Class<? extends Vehiculo> tipo) { // pide de un tipo, declara como variable
-        List<Vehiculo> resultado = new ArrayList<>();
-        for (Vehiculo v : lista) {
-            if (tipo.isInstance(v)) {
-                resultado.add(v);
+    public List<Vehiculo> filtrarTipo(List<? extends Vehiculo> lista, Class<? extends Vehiculo> tipo) { // acepta cualquier vehiculo o hijo (list extends
+        List<Vehiculo> resultado = new ArrayList<>(); // lista array llamada resultado creada
+        for (Vehiculo v : lista) { // por cada vehiculo
+            if (tipo.isInstance(v)) { 
+                resultado.add(v); // si coincide con el tipo, lo agrega al array
             }
         }
         return resultado;
     }
     
-    public void agregarVehiculo(List<? super Vehiculo> lista, Vehiculo vehiculo) { // <-- medio inutil pero bueno
-        lista.add(vehiculo);
-    }
+    
+    
+    public void agregarVehiculo(List<? super Vehiculo> lista, Vehiculo vehiculo) { // <-- inutil, no se usa
+        lista.add(vehiculo);// 
+    } 
+    
+    
     // === NOTAS DE AUTO-EXPLICACION ===
     // wildcards son usados para representar un tipo desconocido, util si trabajas con diferentes tipos de variables
     // <?> : toma cualquier tipo, por ejemplo un List<?> puede ser List<String>, List<Integer>, etc
@@ -98,7 +99,7 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
         Consumer<Vehiculo> subida = vehiculo -> {
             vehiculo.setPrecio(vehiculo.getPrecio() + (vehiculo.getPrecio()*aumento) / 100);
         };
-        listaVehiculos.forEach(subida);
+        listaVehiculos.forEach(subida); 
     }
     
     // === AUTO-EXPLICACION ===
@@ -124,7 +125,7 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
         salida.writeObject(listaVehiculos);
         salida.close();
     }
-    public void cargarSerializado(String archivo) // esto no se si realmente hace algo a pesar de su codigo
+    public void cargarSerializado(String archivo) 
             throws IOException, ClassNotFoundException {
         ObjectInputStream entrada =
                 new ObjectInputStream(new FileInputStream(archivo));
@@ -133,8 +134,42 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
     }
     
     // --- guardado / carga ---
-    // metodo que reemplaza la lista actual en el proyecto
+    // metodo que reemplaza la lista actual en el proyecto, usado a la hora de cargar csv o json
     public void reemplazarLista(ArrayList<Vehiculo> nuevaLista) {
         listaVehiculos = nuevaLista;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// y tipo si realmente quieres un iterator custom, aca lo tenes
+//public class IteradorVehiculos {
+//
+//    private ArrayList<Vehiculo> lista;
+//    private int indice = 0;
+//
+//    public IteradorVehiculos(ArrayList<Vehiculo> lista) {
+//        this.lista = lista;
+//    }
+//
+//    public boolean hasNext() {
+//        return indice < lista.size();
+//    }
+//
+//    public Vehiculo next() {
+//        return lista.get(indice++);
+//    }
+//}

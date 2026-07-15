@@ -15,7 +15,7 @@ import javafx.scene.control.*;
 public class ControladorProyecto {
     // === elementos que se importan ===
     // --- java ---
-    private GestionVehiculos gestion = new GestionVehiculos();
+    private GestionVehiculos gestion = new GestionVehiculos(); // esencialmente trae a gestion
     
     // --- fxml ---
     @FXML 
@@ -58,7 +58,7 @@ public class ControladorProyecto {
     // === metodos ===
     @FXML
     public void initialize() { //codigo ni bien la app inicia, solo si se llama initialize, es muy peculiar
-        // --- otorga una variable a cada columna
+        // --- otorga una variable a cada columna al decir que llame el get respectivo
         columnavehiculos.setCellValueFactory(new PropertyValueFactory<>("tipo"));
         columnamarca.setCellValueFactory(new PropertyValueFactory<>("marca"));
         columnaanio.setCellValueFactory(new PropertyValueFactory<>("anio"));
@@ -120,8 +120,7 @@ public class ControladorProyecto {
     @FXML
     private void agregarVehiculo() {
         try {
-            FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("formulario.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("formulario.fxml"));
             Parent root = loader.load();
             ControladorFormulario controlador = loader.getController();
             Stage ventana = new Stage();
@@ -266,7 +265,7 @@ public class ControladorProyecto {
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Guardar"); 
             alerta.setHeaderText(null);
-            alerta.setContentText("datos guardados correctamente");
+            alerta.setContentText("Datos guardados correctamente.");
             alerta.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
@@ -301,7 +300,7 @@ public class ControladorProyecto {
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Cargar CSV");
             alerta.setHeaderText(null);
-            alerta.setContentText("Datos cargados correctamente.");
+            alerta.setContentText("Datos CSV cargados correctamente.");
             alerta.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
@@ -319,7 +318,7 @@ public class ControladorProyecto {
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Cargar JSON");
             alerta.setHeaderText(null);
-            alerta.setContentText("Datos cargados correctamente.");
+            alerta.setContentText("Datos JSON cargados correctamente.");
             alerta.showAndWait();
 
         } catch (Exception e) {
@@ -327,6 +326,21 @@ public class ControladorProyecto {
         }
     }
     
-    
+    @FXML
+    private void cargarDAT() {
+        try {
+            gestion.cargarSerializado("vehiculos.dat");
+            actualizar();
+
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("Cargar DAT");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Datos DAT cargados correctamente.");
+            alerta.showAndWait();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
 }

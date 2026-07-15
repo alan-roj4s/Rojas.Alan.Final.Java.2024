@@ -13,4 +13,4 @@ public class ExcepcionPersonalizada extends Exception {
         super(mensaje); 
     }
 }
-// en vez de 2 excepciones, llamar esta para que de un mensaje por su cuentas
+// llamar esta para que de un mensaje por su cuentas

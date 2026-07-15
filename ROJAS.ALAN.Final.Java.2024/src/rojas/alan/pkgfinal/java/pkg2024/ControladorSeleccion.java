@@ -59,3 +59,6 @@ public class ControladorSeleccion {
     
     
 }
+
+
+// esta ventana es mucho mas simple debido a que solo muestra una lista con cada respectivo auto
