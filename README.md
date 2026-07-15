@@ -47,7 +47,8 @@ el programa es capaz de:
 
 ## Diagrama UML del proyecto
 
-<img width="2162" height="1074" alt="image" src="https://github.com/user-attachments/assets/d22aaf1e-f5d1-42d4-83b2-e21af8c66d87" />
+<img width="1399" height="1416" alt="image" src="https://github.com/user-attachments/assets/e887c599-fe08-49d0-b86c-827553413015" />
+
 
 
 
