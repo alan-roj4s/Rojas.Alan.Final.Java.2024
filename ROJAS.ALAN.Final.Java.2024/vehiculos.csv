@@ -1,3 +1,7 @@
 Tipo,Marca,Anio,Precio,Color,Estado,Electrico,Atributo1,Atributo2
-Moto,ferreo,2000,5000,Azul,Nuevo,true,false,200
-Auto,Ford,2010,8000,Otro,Usado,false,true,120
+Auto,Ford,1672,20000,Amarillo,En_reparacion,true,true,200
+Moto,Flutes,2001,8000,Negro,Roto,false,false,200
+Camion,volvo,2012,12500,Otro,Nuevo,false,4,3000
+Moto,Hollower,2030,42031,Naranja,Usado,true,true,500
+Auto,borrame,9000,1,Rojo,Roto,true,false,10
+Camion,Jersey,2025,20000,Naranja,Usado,false,6,5000

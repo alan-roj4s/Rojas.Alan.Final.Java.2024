@@ -1,24 +1,74 @@
 ===== LISTADO DE VEHICULOS =====
-Cantidad de vehiculos: 2
+Cantidad de vehiculos: 7
 ================================
 
-Tipo: Moto
-Marca: ferreo
-Año: 2000
-Precio: $5000
-Color: Azul
-Estado: Nuevo
-Electrico: true
-Sidecar: true
-Cilindrado: 200
-----------------------------------------
 Tipo: Auto
 Marca: Ford
-Año: 2010
+Año: 1672
+Precio: $20000
+Color: Amarillo
+Estado: En_reparacion
+Electrico: true
+Automatico: true
+Caballos de fuerza: 200
+----------------------------------------
+Tipo: Moto
+Marca: Flutes
+Año: 2001
 Precio: $8000
+Color: Negro
+Estado: Roto
+Electrico: false
+Sidecar: false
+Cilindrado: 200
+----------------------------------------
+Tipo: Camion
+Marca: volvo
+Año: 2012
+Precio: $12500
 Color: Otro
+Estado: Nuevo
+Electrico: false
+Ejes: 4
+Capacidad de carga: 3000
+----------------------------------------
+Tipo: Moto
+Marca: Hollower
+Año: 2030
+Precio: $42031
+Color: Naranja
+Estado: Usado
+Electrico: true
+Sidecar: true
+Cilindrado: 500
+----------------------------------------
+Tipo: Auto
+Marca: matame
+Año: 9000
+Precio: $1
+Color: Rojo
+Estado: Roto
+Electrico: true
+Automatico: false
+Caballos de fuerza: 10
+----------------------------------------
+Tipo: Camion
+Marca: Jersey
+Año: 2025
+Precio: $20000
+Color: Naranja
 Estado: Usado
 Electrico: false
-Automatico: true
-Caballos de fuerza: 120
+Ejes: 6
+Capacidad de carga: 5000
+----------------------------------------
+Tipo: Moto
+Marca: Matadmeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+Año: 48902
+Precio: $219311111
+Color: Marron
+Estado: En_reparacion
+Electrico: true
+Sidecar: false
+Cilindrado: 900
 ----------------------------------------

@@ -1,24 +1,68 @@
 [
   {
-    "tipo": "Moto",
-    "marca": "ferreo",
-    "anio": 2000,
-    "precio": 5000,
-    "color": "Azul",
-    "estado": "Nuevo",
+    "tipo": "Auto",
+    "marca": "Ford",
+    "anio": 1672,
+    "precio": 20000,
+    "color": "Amarillo",
+    "estado": "En_reparacion",
     "electrico": true,
+    "automatico": true,
+    "caballosDeFuerza": 200
+  },
+  {
+    "tipo": "Moto",
+    "marca": "Flutes",
+    "anio": 2001,
+    "precio": 8000,
+    "color": "Negro",
+    "estado": "Roto",
+    "electrico": false,
     "sidecar": false,
     "cilindrado": 200
   },
   {
-    "tipo": "Auto",
-    "marca": "Ford",
-    "anio": 2010,
-    "precio": 8000,
+    "tipo": "Camion",
+    "marca": "volvo",
+    "anio": 2012,
+    "precio": 12500,
     "color": "Otro",
+    "estado": "Nuevo",
+    "electrico": false,
+    "ejes": 4,
+    "cargaCapacidad": 3000
+  },
+  {
+    "tipo": "Moto",
+    "marca": "Hollower",
+    "anio": 2030,
+    "precio": 42031,
+    "color": "Naranja",
+    "estado": "Usado",
+    "electrico": true,
+    "sidecar": true,
+    "cilindrado": 500
+  },
+  {
+    "tipo": "Auto",
+    "marca": "borrame",
+    "anio": 9000,
+    "precio": 1,
+    "color": "Rojo",
+    "estado": "Roto",
+    "electrico": true,
+    "automatico": false,
+    "caballosDeFuerza": 10
+  },
+  {
+    "tipo": "Camion",
+    "marca": "Jersey",
+    "anio": 2025,
+    "precio": 20000,
+    "color": "Naranja",
     "estado": "Usado",
     "electrico": false,
-    "automatico": true,
-    "caballosDeFuerza": 120
+    "ejes": 6,
+    "cargaCapacidad": 5000
   }
 ]
