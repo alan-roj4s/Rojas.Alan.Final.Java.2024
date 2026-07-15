@@ -1,0 +1,53 @@
+PC
+----
+apache netbeans IDE 22
+
+java fx 21.0.11 o 21.0.7
+https://www.oracle.com/java/technologies/downloads/javafx/#javafx21
+
+
+Gson 2.10.1 jar
+https://mvnrepository.com/artifact/com.google.code.gson/gson/2.10.1
+
+
+
+
+----
+Laptop
+----
+apache netbeans IDE 25
+
+java sdk 21.0.11 o 21.0.7
+https://www.oracle.com/java/technologies/downloads/javafx/#javafx21
+
+
+Gson 2.10.1 jar
+https://mvnrepository.com/artifact/com.google.code.gson/gson/2.10.1
+
+
+jdk 25 windows  x64 bin por si realmentente necesitas
+
+-----------
+
+
+
+
+como asegurar de que corra:
+
+abrir propiedades del proyecto
+
+- Build
+	- Compiling
+		- quitar compile on save
+
+
+
+- Libraries
+	- poner los jars de lib en compile
+	- lo mismo en run
+
+- Run
+	- pegar esto 
+	--module-path "C:\Users\PC\Desktop\storage\NETBEANS-JAVAFX\javafx-sdk-21.0.7\lib" --add-modules javafx.controls,javafx.fxml
+
+(cambiar la ruta de module path en base a como se necesite, no cambiar el add modules
