@@ -155,14 +155,24 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
 
 
 
+
+
+
+
+
+
 // y tipo si realmente quieres un iterator custom, aca lo tenes
+// para su propia clase
+
+
 //public class IteradorVehiculos {
 //
-//    private ArrayList<Vehiculo> lista;
-//    private int indice = 0;
+//    private List<? extends Vehiculo> lista;
+//    private int indice;
 //
-//    public IteradorVehiculos(ArrayList<Vehiculo> lista) {
+//    public IteradorVehiculos(List<? extends Vehiculo> lista) {
 //        this.lista = lista;
+//        indice = 0;
 //    }
 //
 //    public boolean hasNext() {
@@ -173,3 +183,36 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
 //        return lista.get(indice++);
 //    }
 //}
+
+
+// y luego para gestion :
+//public IteradorVehiculos iterator() {
+//    return new IteradorVehiculos(listaVehiculos);
+//}
+
+
+// y po cada llamado a "for (Vehiculo v : listaVehiculos)" se remplazaria por :
+// IteradorVehiculos it = new IteradorVehiculos((ArrayList<Vehiculo>) lista);
+//
+//while (it.hasNext()) {
+//    Vehiculo v = it.next();
+
+
+//y listar se reemplazaria por
+//@Override
+//public List<Vehiculo> listar() {
+//    ArrayList<Vehiculo> copia = new ArrayList<>();
+//
+//    IteradorVehiculos it = new IteradorVehiculos(listaVehiculos);
+//
+//    while (it.hasNext()) {
+//        copia.add(it.next());
+//    }
+//
+//    return copia;
+//}
+
+
+// no fue realmente implementa por que java ya tiene uno propio, realmente no se necesita uno personalizado
+// encerio, esto solo complica el proyecto mas y se ve feo y funciona feo y es feo
+// mi cabeza ya no da AAAAAAAAAAAAAAAA
