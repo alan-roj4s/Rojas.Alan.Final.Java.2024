@@ -1,7 +1,5 @@
 # Rojas.Alan.Final.Java.2024
 ====================================
-
-
 # Sistema CRUD de Gestion de Vehiculos.
 
 ### Sobre Mi: 
