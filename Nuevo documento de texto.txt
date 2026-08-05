@@ -50,4 +50,5 @@ abrir propiedades del proyecto
 	- pegar esto 
 	--module-path "C:\Users\PC\Desktop\storage\NETBEANS-JAVAFX\javafx-sdk-21.0.7\lib" --add-modules javafx.controls,javafx.fxml
 
-(cambiar la ruta de module path en base a como se necesite, no cambiar el add modules
+(cambiar la ruta de module path en base a como se necesite, no cambiar el add modules)
+https://docs.google.com/document/d/1cBuHQV2c9IN1eDJQQhukHOMvpedy0bhvpIu_oM9EVns/edit?pli=1&tab=t.0
