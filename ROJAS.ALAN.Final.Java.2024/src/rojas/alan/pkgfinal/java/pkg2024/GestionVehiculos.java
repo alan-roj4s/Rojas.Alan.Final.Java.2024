@@ -16,6 +16,11 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
     public GestionVehiculos() {
         listaVehiculos = new ArrayList<>(); // luego crea el array con la variable
     }
+    // iTERATOR CUSTOM
+    public IteradorVehiculos iterator() {
+        return new IteradorVehiculos(listaVehiculos);
+    }
+    
     
     
     // === metodos interfaces ===
@@ -46,7 +51,15 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
     
     @Override
     public List<Vehiculo> listar() {
-        return new ArrayList<>(listaVehiculos); // envia una copia del array existente, protegiendo el interno
+        ArrayList<Vehiculo> copia = new ArrayList<>();
+
+        IteradorVehiculos it = new IteradorVehiculos(listaVehiculos);
+
+        while (it.hasNext()) {
+            copia.add(it.next());
+        }
+
+        return copia;
     }
     
     
@@ -164,7 +177,7 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
 // y tipo si realmente quieres un iterator custom, aca lo tenes
 // para su propia clase
 
-
+//---- CLASE ----
 //public class IteradorVehiculos {
 //
 //    private List<? extends Vehiculo> lista;
@@ -186,24 +199,42 @@ public class GestionVehiculos implements GestionInterface<Vehiculo>{ // Vehiculo
 
 
 // y luego para gestion :
+//---- METODO NUEVO ----
 //public IteradorVehiculos iterator() {
 //    return new IteradorVehiculos(listaVehiculos);
 //}
 
+// ---- FILTRARTIPO() ----
+// quitar el for y cambiar por
 
-// y po cada llamado a "for (Vehiculo v : listaVehiculos)" se remplazaria por :
-// IteradorVehiculos it = new IteradorVehiculos((ArrayList<Vehiculo>) lista);
+//IteradorVehiculos it = new IteradorVehiculos(lista);
 //
 //while (it.hasNext()) {
 //    Vehiculo v = it.next();
+//
+//    if (tipo.isInstance(v)) {
+//        resultado.add(v);
+//    }
+//}
 
 
-//y listar se reemplazaria por
+//---- AUMENTOPRECIO() pero no necesario ----
+// cambiar listaVehiculos.forEach(subida); por:
+
+//IteradorVehiculos it = iterator();
+//
+//while (it.hasNext()) {
+//    subida.accept(it.next());
+//}
+
+
+// ---- LISTAR() ----\
+
 //@Override
 //public List<Vehiculo> listar() {
 //    ArrayList<Vehiculo> copia = new ArrayList<>();
 //
-//    IteradorVehiculos it = new IteradorVehiculos(listaVehiculos);
+//    IteradorVehiculos it = iterator();
 //
 //    while (it.hasNext()) {
 //        copia.add(it.next());
